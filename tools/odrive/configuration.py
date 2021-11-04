@@ -75,7 +75,7 @@ def backup_config(device, filename, logger):
 
     data = get_dict(device, device, False)
     with open(filename, 'w') as file:
-        json.dump(data, file)
+        json.dump(data, file, indent=4)
     logger.info("Configuration saved.")
 
 def restore_config(device, filename, logger):
