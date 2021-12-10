@@ -190,6 +190,7 @@ Some of these chips come with evaluation boards that can simplify mounting the c
    
     - The encoder's SCK, MISO (aka "DATA" on CUI encoders), MOSI (if present on the encoder), GND and 3.3V should connect to the ODrive pins with the same label. If you want to save a wire with AMS encoders, you can also connect the encoder's MOSI to the encoder's VDD instead.
     - The encoder's Chip Select (aka nCS/CSn) can be connected to any of the ODrive's GPIOs (caution: GPIOs 1 and 2 are usually used by UART).
+      With AMS encoders it is recommended to add an external pull-up resistor to the CS GPIO pin to avoid SPI errors during initial configuration.
 
 2. In `odrivetool`, run:
 
